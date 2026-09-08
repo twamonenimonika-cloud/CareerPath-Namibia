@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="CareerPath Namibia - A career guidance website for Grade 10 to 12 learners.">
+
+    <title>CareerPath Namibia | Discover Your Future</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            🎓 CareerPath <span>Namibia</span>
+        </div>
+
+        <button class="menu-button" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <nav id="navigation">
+
+            <a href="#home">Home</a>
+
+            <a href="#careers">Careers</a>
+
+            <a href="#quiz">Career Quiz</a>
+
+            <a href="#subjects">Subjects</a>
+
+            <a href="#about">About</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                🇳🇦 CAREER GUIDANCE FOR NAMIBIAN LEARNERS
+            </p>
+
+            <h1>
+                Discover Your Future.
+                <span>Choose Your Career.</span>
+            </h1>
+
+            <p class="hero-text">
+
+                Welcome to CareerPath Namibia, a career guidance
+                platform designed to help Grade 10–12 learners
+                explore career opportunities and understand
+                the subjects they may need.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#careers" class="button">
+                    Explore Careers →
+                </a>
+
+                <a href="#quiz" class="button secondary">
+                    Take Career Quiz
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="compass">
+                🧭
+            </div>
+
+            <h2>
+                Your future starts here.
+            </h2>
+
+            <p>
+                Explore careers in Technology, Medicine,
+                Agriculture, Education, Business and Tourism.
+            </p>
+
+            <ul>
+
+                <li>✓ Explore career options</li>
+
+                <li>✓ Check suggested subjects</li>
+
+                <li>✓ Take an interactive quiz</li>
+
+                <li>✓ Plan your future</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CAREERS ================= -->
+
+    <section id="careers" class="section">
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                CAREER EXPLORER
+            </p>
+
+            <h2>
+                Find a Career That Fits You
+            </h2>
+
+            <p>
+                Search for a career or select an interest area
+                to find suitable career options.
+            </p>
+
+        </div>
+
+
+        <!-- Search -->
+
+        <div class="search-area">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔎 Search for a career..."
+                onkeyup="searchCareers()"
+            >
+
+
+            <select id="categoryFilter"
+                    onchange="filterCareers()">
+
+                <option value="all">
+                    All Career Areas
+                </option>
+
+                <option value="Technology">
+                    Technology
+                </option>
+
+                <option value="Medicine">
+                    Medicine
+                </option>
+
+                <option value="Agriculture">
+                    Agriculture
+                </option>
+
+                <option value="Education">
+                    Education
+                </option>
+
+                <option value="Business">
+                    Business
+                </option>
+
+                <option value="Tourism">
+                    Tourism
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Career cards -->
+
+        <div id="careerContainer" class="career-grid">
+
+
+            <!-- Technology -->
+
+            <div class="career-card"
+                 data-category="Technology">
+
+                <div class="career-icon">
+                    💻
+                </div>
+
+                <span class="tag">
+                    Technology
+                </span>
+
+                <h3>
+                    Software Developer
+                </h3>
+
+                <p>
+                    Designs and develops websites,
+                    applications and computer software.
+                </p>
+
+                <strong>
+                    Suggested subjects:
+                </strong>
+
+                <p>
+                    Mathematics, Computer Studies,
+                    Physical Science
+                </p>
+
+                <button onclick="showCareer(
+                    'Software Developer',
+                    'Technology',
+                    'Software developers create websites, applications and software systems. They use programming and problem-solving skills.'
+                )">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <!-- Cybersecurity -->
+
+            <div class="career-card"
+                 data-category="Technology">
+
+                <div class="career-icon">
+                    🔐
+                </div>
+
+                <span class="tag">
+                    Technology
+                </span>
+
+                <h3>
+                    Cybersecurity Specialist
+                </h3>
+
+                <p>
+                    Protects computers, networks and
+                    information from cyber threats.
+                </p>
+
+                <strong>
+                    Suggested subjects:
+                </strong>
+
+                <p>
+                    Mathematics, Computer Studies,
+                    Physical Science
+                </p>
+
+                <button onclick="showCareer(
+                    'Cybersecurity Specialist',
+                    'Technology',
+                    'Cybersecurity specialists protect computer systems, networks and information from unauthorised access and digital threats.'
+                )">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <!-- Doctor -->
+
+            <div class="career-card"
+                 data-category="Medicine">
+
+                <div class="career-icon">
+                    🩺
+                </div>
+
+                <span class="tag">
+                    Medicine
+                </span>
+
+                <h3>
+                    Doctor
+                </h3>
+
+                <p>
+                    Diagnoses illnesses and provides
+                    medical care to patients.
+                </p>
+
+                <strong>
+                    Suggested subjects:
+                </strong>
+
+                <p>
+                    Biology, Physical Science,
+                    Mathematics
+                </p>
+
+                <button onclick="showCareer(
+                    'Doctor',
+                    'Medicine',
+                    'Doctors diagnose and treat illnesses and help patients maintain and improve their health.'
+                )">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <!-- Pharmacist -->
+
+            <div class="career-card"
+                 data-category="Medicine">
+
+                <div class="career-icon">
+                    💊
+                </div>
+
+                <span class="tag">
+                    Medicine
+                </span>
+
+                <h3>
+                    Pharmacist
+                </h3>
+
+                <p>
+                    Works with medicines and helps
+                    patients use them safely.
+                </p>
+
+                <strong>
+                    Suggested subjects:
+                </strong>
+
+                <p>
+                    Biology, Physical Science,
+                    Mathematics
+                </p>
+
+                <button onclick="showCareer(
+                    'Pharmacist',
+                    'Medicine',
+                    'Pharmacists work with medicines and provide guidance on their safe and effective use.'
+                )">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <!-- Agriculture -->
+
+            <div class="career-card"
+                 data-category="Agriculture">
+
+                <div class="career-icon">
+                    🌱
+                </div>
+
+                <span class="tag">
+                    Agriculture
+                </span>
+
+                <h3>
+                    Agricultural Scientist
+                </h3>
+
+                <p>
+                    Uses science and research to improve
+                    crops, livestock and farming.
+                </p>
+
+                <strong>
+                    Suggested subjects:
+                </strong>
+
+                <p>
+                    Agriculture, Biology,
+                    Mathematics
+                </p>
+
+                <button onclick="showCareer(
+                    'Agricultural Scientist',
+                    'Agriculture',
+                    'Agricultural scientists use research and scientific knowledge to improve agricultural production and solve farming problems.'
+                )">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <!-- Agriculture Extension -->
+
+            <div class="career-card"
+                 data-category="Agriculture">
+
+                <div class="career-icon">
+                    🚜
+                </div>
+
+                <span class="tag">
+                    Agriculture
+                </span>
+
+                <h3>
+                    Agricultural Extension Officer
+                </h3>
+
+                <p>
+                    Helps farmers improve production
+                    through practical knowledge.
+                </p>
+
+                <strong>
+                    Suggested subjects:
+                </strong>
+
+                <p>
+                    Agriculture, Biology,
+                    Mathematics
+                </p>
+
+                <button onclick="showCareer(
+                    'Agricultural Extension Officer',
+                    'Agriculture',
+                    'Extension officers work with farmers and communities by sharing agricultural knowledge and improved farming practices.'
+                )">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <!-- Teacher -->
+
+            <div class="career-card"
+                 data-category="Education">
+
+                <div class="career-icon">
+                    📚
+                </div>
+
+                <span class="tag">
+                    Education
+                </span>
+
+                <h3>
+                    Teacher
+                </h3>
+
+                <p>
+                    Teaches learners and helps them
+                    develop knowledge and skills.
+                </p>
+
+                <strong>
+                    Suggested subjects:
+                </strong>
+
+                <p>
+                    Relevant teaching subject,
+                    English
+                </p>
+
+                <button onclick="showCareer(
+                    'Teacher',
+                    'Education',
+                    'Teachers educate learners, prepare lessons, assess learning and help students develop academically and personally.'
+                )">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <!-- Entrepreneur -->
+
+            <div class="career-card"
+                 data-category="Business">
+
+                <div class="career-icon">
+                    🚀
+                </div>
+
+                <span class="tag">
+                    Business
+                </span>
+
+                <h3>
+                    Entrepreneur
+                </h3>
+
+                <p>
+                    Creates and manages businesses
+                    and identifies opportunities.
+                </p>
+
+                <strong>
+                    Suggested subjects:
+                </strong>
+
+                <p>
+                    Business Studies, Accounting,
+                    Mathematics
+                </p>
+
+                <button onclick="showCareer(
+                    'Entrepreneur',
+                    'Business',
+                    'Entrepreneurs identify opportunities, create products or services and manage businesses.'
+                )">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <!-- Accountant -->
+
+            <div class="career-card"
+                 data-category="Business">
+
+                <div class="career-icon">
+                    📊
+                </div>
+
+                <span class="tag">
+                    Business
+                </span>
+
+                <h3>
+                    Accountant
+                </h3>
+
+                <p>
+                    Records, analyses and reports
+                    financial information.
+                </p>
+
+                <strong>
+                    Suggested subjects:
+                </strong>
+
+                <p>
+                    Accounting, Mathematics,
+                    Economics
+                </p>
+
+                <button onclick="showCareer(
+                    'Accountant',
+                    'Business',
+                    'Accountants prepare and analyse financial information and help organisations manage their finances.'
+                )">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <!-- Tourism -->
+
+            <div class="career-card"
+                 data-category="Tourism">
+
+                <div class="career-icon">
+                    🏨
+                </div>
+
+                <span class="tag">
+                    Tourism
+                </span>
+
+                <h3>
+                    Tourism & Hospitality Manager
+                </h3>
+
+                <p>
+                    Manages tourism businesses,
+                    hotels and hospitality services.
+                </p>
+
+                <strong>
+                    Suggested subjects:
+                </strong>
+
+                <p>
+                    Tourism, Business Studies,
+                    English
+                </p>
+
+                <button onclick="showCareer(
+                    'Tourism & Hospitality Manager',
+                    'Tourism',
+                    'Tourism and hospitality managers oversee services and operations in hotels, lodges and tourism businesses.'
+                )">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <!-- Tour Guide -->
+
+            <div class="career-card"
+                 data-category="Tourism">
+
+                <div class="career-icon">
+                    🗺️
+                </div>
+
+                <span class="tag">
+                    Tourism
+                </span>
+
+                <h3>
+                    Tour Guide
+                </h3>
+
+                <p>
+                    Guides visitors and shares information
+                    about destinations and attractions.
+                </p>
+
+                <strong>
+                    Suggested subjects:
+                </strong>
+
+                <p>
+                    Tourism, Geography,
+                    English
+                </p>
+
+                <button onclick="showCareer(
+                    'Tour Guide',
+                    'Tourism',
+                    'Tour guides provide visitors with information and experiences about destinations, attractions, history and culture.'
+                )">
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUIZ ================= -->
+
+    <section id="quiz" class="quiz-section">
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                INTERACTIVE CAREER TOOL
+            </p>
+
+            <h2>
+                🎯 Career Interest Quiz
+            </h2>
+
+            <p>
+                Answer the questions below to discover
+                which career area matches your interests.
+            </p>
+
+        </div>
+
+
+        <div class="quiz-box">
+
+            <p id="questionNumber">
+                Question 1 of 6
+            </p>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+            <h3 id="question">
+                Which activity sounds most enjoyable?
+            </h3>
+
+            <div id="answers">
+
+                <button onclick="selectAnswer(0)">
+                    💻 Building a website or app
+                </button>
+
+                <button onclick="selectAnswer(1)">
+                    🩺 Helping someone with a health problem
+                </button>
+
+                <button onclick="selectAnswer(2)">
+                    🌱 Growing crops or caring for animals
+                </button>
+
+                <button onclick="selectAnswer(3)">
+                    📚 Explaining something to learners
+                </button>
+
+                <button onclick="selectAnswer(4)">
+                    💼 Starting a business
+                </button>
+
+                <button onclick="selectAnswer(5)">
+                    ✈️ Planning a trip or helping visitors
+                </button>
+
+            </div>
+
+            <p id="quizMessage"></p>
+
+            <button class="button" onclick="nextQuestion()">
+                Next →
+            </button>
+
+        </div>
+
+
+        <div id="quizResult" class="quiz-result">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SUBJECTS ================= -->
+
+    <section id="subjects" class="section">
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                SUBJECT GUIDANCE
+            </p>
+
+            <h2>
+                📚 Subjects Can Open Doors
+            </h2>
+
+            <p>
+                Explore subjects that can support different
+                career pathways.
+            </p>
+
+        </div>
+
+
+        <div class="subject-grid">
+
+
+            <div class="subject-card">
+
+                <div>💻</div>
+
+                <h3>
+                    Technology
+                </h3>
+
+                <p>
+                    Mathematics, Computer Studies
+                    and Physical Science.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div>🩺</div>
+
+                <h3>
+                    Medicine & Health
+                </h3>
+
+                <p>
+                    Biology, Physical Science
+                    and Mathematics.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div>🌱</div>
+
+                <h3>
+                    Agriculture
+                </h3>
+
+                <p>
+                    Agriculture, Biology
+                    and Mathematics.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div>📚</div>
+
+                <h3>
+                    Education
+                </h3>
+
+                <p>
+                    Relevant teaching subject,
+                    English and supporting subjects.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div>💼</div>
+
+                <h3>
+                    Business
+                </h3>
+
+                <p>
+                    Accounting, Economics,
+                    Business Studies and Mathematics.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div>✈️</div>
+
+                <h3>
+                    Tourism
+                </h3>
+
+                <p>
+                    Tourism, Geography,
+                    English and Business Studies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about-section">
+
+        <div class="about-content">
+
+            <p class="small-title">
+                ABOUT CAREERPATH NAMIBIA
+            </p>
+
+            <h2>
+                Helping learners plan their future.
+            </h2>
+
+            <p>
+
+                CareerPath Namibia is a student-focused
+                career guidance website designed for
+                Grade 10–12 learners.
+
+            </p>
+
+            <p>
+
+                The website helps learners explore
+                career choices, understand subject
+                pathways and think about their future
+                education and careers.
+
+            </p>
+
+            <div class="features">
+
+                <div>
+                    🔎
+                    <strong>
+                        Career Search
+                    </strong>
+                </div>
+
+                <div>
+                    🎯
+                    <strong>
+                        Career Quiz
+                    </strong>
+                </div>
+
+                <div>
+                    📚
+                    <strong>
+                        Subject Guidance
+                    </strong>
+                </div>
+
+                <div>
+                    📱
+                    <strong>
+                        Mobile Friendly
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="section">
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                FEEDBACK
+            </p>
+
+            <h2>
+                💬 Give Us Your Feedback
+            </h2>
+
+            <p>
+                Tell us how we can improve CareerPath Namibia.
+            </p>
+
+        </div>
+
+
+        <form id="feedbackForm"
+              onsubmit="submitFeedback(event)">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your email"
+                required
+            >
+
+            <textarea
+                id="feedback"
+                rows="6"
+                placeholder="Write your feedback..."
+                required
+            ></textarea>
+
+            <button class="button" type="submit">
+                Submit Feedback
+            </button>
+
+            <p id="feedbackMessage"></p>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            🎓 CareerPath Namibia
+        </h3>
+
+        <p>
+            Explore. Learn. Plan. Succeed.
+        </p>
+
+        <p>
+            © 2026 CareerPath Namibia
+        </p>
+
+    </footer>
+
+
+    <!-- Career popup -->
+
+    <div id="careerModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close"
+                    onclick="closeCareer()">
+                ×
+            </button>
+
+            <div id="modalContent">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Connect JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

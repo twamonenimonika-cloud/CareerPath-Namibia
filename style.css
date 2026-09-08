@@ -1,0 +1,883 @@
+/* =====================================================
+   CAREERPATH NAMIBIA
+   PROFESSIONAL WEBSITE STYLES
+   ===================================================== */
+
+
+/* ---------- GENERAL ---------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8fa;
+    color: #172033;
+    line-height: 1.6;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.header {
+    background: #082f49;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+}
+
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+
+.logo span {
+    color: #f2c14e;
+}
+
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #f2c14e;
+}
+
+
+.menu-button {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    background:
+        linear-gradient(
+            135deg,
+            #082f49,
+            #126b83
+        );
+
+    color: white;
+
+    padding: 90px 8%;
+
+    display: grid;
+
+    grid-template-columns:
+        1.3fr
+        0.7fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.small-title {
+    color: #f2c14e;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+}
+
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+    color: #f2c14e;
+}
+
+
+.hero-text {
+    font-size: 18px;
+
+    max-width: 700px;
+
+    color: #e0edf2;
+}
+
+
+.hero-buttons {
+    margin-top: 25px;
+}
+
+
+.button {
+    display: inline-block;
+
+    background: #f2c14e;
+
+    color: #172033;
+
+    border: none;
+
+    padding: 13px 20px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    margin: 7px;
+
+    transition: 0.3s;
+}
+
+
+.button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 20px rgba(0,0,0,0.2);
+}
+
+
+.button.secondary {
+    background: white;
+
+    color: #082f49;
+}
+
+
+/* Hero card */
+
+.hero-card {
+    background: rgba(255,255,255,0.1);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.3);
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    backdrop-filter: blur(10px);
+}
+
+
+.compass {
+    font-size: 65px;
+
+    margin-bottom: 10px;
+}
+
+
+.hero-card h2 {
+    margin-bottom: 12px;
+}
+
+
+.hero-card p {
+    color: #e0edf2;
+}
+
+
+.hero-card ul {
+    list-style: none;
+
+    margin-top: 20px;
+}
+
+
+.hero-card li {
+    margin: 8px 0;
+}
+
+
+/* ---------- SECTIONS ---------- */
+
+.section {
+    padding: 80px 8%;
+
+    max-width: 1300px;
+
+    margin: auto;
+}
+
+
+.section-heading {
+    text-align: center;
+
+    max-width: 750px;
+
+    margin:
+        0 auto
+        35px;
+}
+
+
+.section-heading h2 {
+    font-size: 40px;
+
+    line-height: 1.2;
+
+    margin-bottom: 12px;
+}
+
+
+.section-heading p {
+    color: #647382;
+}
+
+
+/* ---------- SEARCH ---------- */
+
+.search-area {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+
+.search-area input,
+.search-area select {
+    padding: 14px;
+
+    border:
+        1px solid
+        #ccd7df;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+
+    background: white;
+}
+
+
+.search-area input {
+    flex: 1;
+}
+
+
+.search-area select {
+    width: 240px;
+}
+
+
+/* ---------- CAREER GRID ---------- */
+
+.career-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.career-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    border:
+        1px solid
+        #e1e8ed;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+}
+
+
+.career-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(0,0,0,0.12);
+}
+
+
+.career-icon {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.tag {
+    display: inline-block;
+
+    background: #e8f4f6;
+
+    color: #126b83;
+
+    padding:
+        4px
+        10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+.career-card h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+
+.career-card p {
+    color: #647382;
+
+    margin-bottom: 10px;
+}
+
+
+.career-card button {
+    background: #082f49;
+
+    color: white;
+
+    border: none;
+
+    padding:
+        10px
+        15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+
+.career-card button:hover {
+    background: #126b83;
+}
+
+
+/* ---------- QUIZ ---------- */
+
+.quiz-section {
+    background: #edf6f7;
+
+    padding: 80px 8%;
+}
+
+
+.quiz-box {
+    max-width: 850px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0,0,0,0.08);
+}
+
+
+.progress {
+    width: 100%;
+
+    height: 10px;
+
+    background: #e5eaed;
+
+    border-radius: 20px;
+
+    margin:
+        10px
+        0
+        30px;
+
+    overflow: hidden;
+}
+
+
+#progressBar {
+    height: 100%;
+
+    width: 16.6%;
+
+    background: #126b83;
+
+    transition: 0.3s;
+}
+
+
+#question {
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+
+#answers button {
+    display: block;
+
+    width: 100%;
+
+    text-align: left;
+
+    padding: 14px;
+
+    margin:
+        9px
+        0;
+
+    border:
+        2px solid
+        #dce4e8;
+
+    background: white;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+#answers button:hover {
+    border-color: #126b83;
+
+    background: #edf6f7;
+}
+
+
+#answers button.selected {
+    border-color: #126b83;
+
+    background: #e4f3f5;
+}
+
+
+#quizMessage {
+    color: #b56b00;
+
+    font-weight: bold;
+
+    min-height: 25px;
+}
+
+
+.quiz-result {
+    max-width: 850px;
+
+    margin: 25px auto;
+
+    text-align: center;
+}
+
+
+/* ---------- SUBJECTS ---------- */
+
+.subject-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.subject-card {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 16px;
+
+    border:
+        1px solid
+        #e1e8ed;
+
+    box-shadow:
+        0 7px 25px
+        rgba(0,0,0,0.06);
+}
+
+
+.subject-card > div {
+    font-size: 45px;
+}
+
+
+.subject-card h3 {
+    margin:
+        8px
+        0;
+}
+
+
+.subject-card p {
+    color: #647382;
+}
+
+
+/* ---------- ABOUT ---------- */
+
+.about-section {
+    background: #082f49;
+
+    color: white;
+
+    padding: 80px 8%;
+}
+
+
+.about-content {
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+.about-content h2 {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+
+.about-content p {
+    color: #d8e6ec;
+
+    margin-bottom: 15px;
+
+    max-width: 800px;
+}
+
+
+.features {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+.features div {
+    background:
+        rgba(255,255,255,0.1);
+
+    padding: 20px;
+
+    border-radius: 12px;
+}
+
+
+/* ---------- FORM ---------- */
+
+form {
+    max-width: 700px;
+
+    margin: auto;
+
+    display: grid;
+
+    gap: 13px;
+}
+
+
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border:
+        1px solid
+        #ccd7df;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+}
+
+
+form textarea {
+    resize: vertical;
+}
+
+
+#feedbackMessage {
+    color: #126b83;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* ---------- MODAL ---------- */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0,0,0,0.7);
+
+    z-index: 2000;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+.modal.show {
+    display: flex;
+}
+
+
+.modal-content {
+    background: white;
+
+    max-width: 600px;
+
+    width: 100%;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    position: relative;
+}
+
+
+.close {
+    position: absolute;
+
+    top: 10px;
+
+    right: 15px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 32px;
+
+    cursor: pointer;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background: #061e2e;
+
+    color: #cbdbe3;
+
+    text-align: center;
+
+    padding: 35px;
+}
+
+
+footer h3 {
+    color: white;
+
+    margin-bottom: 5px;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 850px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+
+    .career-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .subject-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .features {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .menu-button {
+        display: block;
+    }
+
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        right: 0;
+
+        background: #082f49;
+
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+
+    nav.show {
+        display: flex;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .hero {
+        padding: 60px 6%;
+    }
+
+
+    .section {
+        padding: 60px 6%;
+    }
+
+
+    .career-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+
+    .search-area {
+        flex-direction: column;
+    }
+
+
+    .search-area select {
+        width: 100%;
+    }
+
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+}
